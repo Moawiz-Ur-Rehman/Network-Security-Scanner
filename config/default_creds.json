@@ -1,0 +1,68 @@
+{
+  "credentials": [
+    {
+      "service": "ssh",
+      "port": 22,
+      "combos": [
+        {"username": "admin", "password": "admin"},
+        {"username": "root", "password": "root"},
+        {"username": "root", "password": "toor"},
+        {"username": "admin", "password": "password"},
+        {"username": "admin", "password": "12345"},
+        {"username": "user", "password": "user"},
+        {"username": "ubuntu", "password": "ubuntu"},
+        {"username": "pi", "password": "raspberry"},
+        {"username": "admin", "password": ""},
+        {"username": "root", "password": ""}
+      ]
+    },
+    {
+      "service": "ftp",
+      "port": 21,
+      "combos": [
+        {"username": "admin", "password": "admin"},
+        {"username": "ftp", "password": "ftp"},
+        {"username": "anonymous", "password": "anonymous"},
+        {"username": "anonymous", "password": ""},
+        {"username": "user", "password": "user"},
+        {"username": "admin", "password": "password"},
+        {"username": "admin", "password": ""},
+        {"username": "root", "password": "root"}
+      ]
+    },
+    {
+      "service": "telnet",
+      "port": 23,
+      "combos": [
+        {"username": "admin", "password": "admin"},
+        {"username": "root", "password": "root"},
+        {"username": "admin", "password": "password"},
+        {"username": "admin", "password": "1234"},
+        {"username": "admin", "password": ""},
+        {"username": "user", "password": "user"}
+      ]
+    },
+    {
+      "service": "mysql",
+      "port": 3306,
+      "combos": [
+        {"username": "root", "password": ""},
+        {"username": "root", "password": "root"},
+        {"username": "root", "password": "password"},
+        {"username": "admin", "password": "admin"},
+        {"username": "mysql", "password": "mysql"},
+        {"username": "root", "password": "toor"}
+      ]
+    },
+    {
+      "service": "postgres",
+      "port": 5432,
+      "combos": [
+        {"username": "postgres", "password": "postgres"},
+        {"username": "postgres", "password": "password"},
+        {"username": "postgres", "password": ""},
+        {"username": "admin", "password": "admin"}
+      ]
+    }
+  ]
+}

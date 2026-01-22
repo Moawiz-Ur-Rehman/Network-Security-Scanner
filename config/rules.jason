@@ -1,0 +1,186 @@
+{
+  "port_rules": [
+    {
+      "port": 21,
+      "service": "FTP",
+      "severity": "HIGH",
+      "message": "FTP service detected - transmits credentials in cleartext"
+    },
+    {
+      "port": 23,
+      "service": "Telnet",
+      "severity": "CRITICAL",
+      "message": "Telnet service detected - unencrypted remote access protocol"
+    },
+    {
+      "port": 25,
+      "service": "SMTP",
+      "severity": "MEDIUM",
+      "message": "SMTP service exposed - potential spam relay if misconfigured"
+    },
+    {
+      "port": 69,
+      "service": "TFTP",
+      "severity": "HIGH",
+      "message": "TFTP service detected - no authentication, potential data exposure"
+    },
+    {
+      "port": 139,
+      "service": "NetBIOS",
+      "severity": "MEDIUM",
+      "message": "NetBIOS service detected - legacy protocol with known vulnerabilities"
+    },
+    {
+      "port": 445,
+      "service": "SMB",
+      "severity": "HIGH",
+      "message": "SMB service exposed - vulnerable to ransomware and lateral movement"
+    },
+    {
+      "port": 1433,
+      "service": "MSSQL",
+      "severity": "HIGH",
+      "message": "Microsoft SQL Server exposed - should not be publicly accessible"
+    },
+    {
+      "port": 1521,
+      "service": "Oracle",
+      "severity": "HIGH",
+      "message": "Oracle database exposed - should not be publicly accessible"
+    },
+    {
+      "port": 3306,
+      "service": "MySQL",
+      "severity": "HIGH",
+      "message": "MySQL database exposed - should not be publicly accessible"
+    },
+    {
+      "port": 3389,
+      "service": "RDP",
+      "severity": "HIGH",
+      "message": "RDP service exposed - common target for brute force attacks"
+    },
+    {
+      "port": 5432,
+      "service": "PostgreSQL",
+      "severity": "HIGH",
+      "message": "PostgreSQL database exposed - should not be publicly accessible"
+    },
+    {
+      "port": 5900,
+      "service": "VNC",
+      "severity": "HIGH",
+      "message": "VNC service detected - often has weak authentication"
+    },
+    {
+      "port": 6379,
+      "service": "Redis",
+      "severity": "CRITICAL",
+      "message": "Redis exposed - often lacks authentication by default, RCE possible"
+    },
+    {
+      "port": 8080,
+      "service": "HTTP-Proxy",
+      "severity": "MEDIUM",
+      "message": "HTTP proxy/admin panel detected - verify authentication is enabled"
+    },
+    {
+      "port": 9200,
+      "service": "Elasticsearch",
+      "severity": "CRITICAL",
+      "message": "Elasticsearch exposed - no authentication by default, data exposure risk"
+    },
+    {
+      "port": 27017,
+      "service": "MongoDB",
+      "severity": "CRITICAL",
+      "message": "MongoDB exposed - often misconfigured without authentication"
+    }
+  ],
+  "version_rules": [
+    {
+      "service": "apache",
+      "vulnerable_versions": ["2.4.49", "2.4.50"],
+      "severity": "CRITICAL",
+      "message": "Apache version vulnerable to path traversal and RCE (CVE-2021-41773, CVE-2021-42013)"
+    },
+    {
+      "service": "apache",
+      "vulnerable_versions": ["2.4.48", "2.4.47", "2.4.46"],
+      "severity": "HIGH",
+      "message": "Apache version has known vulnerabilities - update recommended"
+    },
+    {
+      "service": "openssh",
+      "version_pattern": "^[0-6]\\.",
+      "severity": "HIGH",
+      "message": "OpenSSH version is outdated (v6.x or older) - contains multiple CVEs"
+    },
+    {
+      "service": "openssh",
+      "version_pattern": "^7\\.[0-3]",
+      "severity": "MEDIUM",
+      "message": "OpenSSH version is outdated - update to latest version recommended"
+    },
+    {
+      "service": "nginx",
+      "vulnerable_versions": ["1.20.0", "1.19.10", "1.19.9"],
+      "severity": "HIGH",
+      "message": "Nginx version has known vulnerabilities - update recommended"
+    },
+    {
+      "service": "mysql",
+      "version_pattern": "^5\\.[0-5]",
+      "severity": "HIGH",
+      "message": "MySQL version is outdated and unsupported - critical vulnerabilities exist"
+    },
+    {
+      "service": "postgresql",
+      "version_pattern": "^9\\.",
+      "severity": "MEDIUM",
+      "message": "PostgreSQL version 9.x is end-of-life - upgrade recommended"
+    },
+    {
+      "service": "iis",
+      "version_pattern": "^[0-7]\\.",
+      "severity": "HIGH",
+      "message": "IIS version is outdated - multiple security vulnerabilities"
+    },
+    {
+      "service": "tomcat",
+      "version_pattern": "^[0-8]\\.",
+      "severity": "HIGH",
+      "message": "Apache Tomcat version is outdated - known vulnerabilities exist"
+    },
+    {
+      "service": "php",
+      "version_pattern": "^[0-6]\\.",
+      "severity": "CRITICAL",
+      "message": "PHP version is critically outdated and unsupported - immediate update required"
+    },
+    {
+      "service": "php",
+      "version_pattern": "^7\\.[0-2]",
+      "severity": "HIGH",
+      "message": "PHP version is end-of-life - security updates no longer provided"
+    },
+    {
+      "service": "proftpd",
+      "vulnerable_versions": ["1.3.5", "1.3.4", "1.3.3"],
+      "severity": "CRITICAL",
+      "message": "ProFTPD version has critical vulnerabilities including RCE"
+    },
+    {
+      "service": "vsftpd",
+      "vulnerable_versions": ["2.3.4"],
+      "severity": "CRITICAL",
+      "message": "vsftpd 2.3.4 contains backdoor - immediate action required"
+    },
+    {
+      "service": "samba",
+      "version_pattern": "^[0-3]\\.",
+      "severity": "CRITICAL",
+      "message": "Samba version is critically outdated - vulnerable to EternalBlue and other exploits"
+    }
+  ]
+}
