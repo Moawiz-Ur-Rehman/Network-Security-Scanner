@@ -152,10 +152,12 @@ Customize credential testing (use responsibly):
 ## 📸 Screenshots
 
 ### Modern GUI
-![Modern GUI](https://via.placeholder.com/800x600.png?text=Network+Security+Scanner+GUI)
+<img width="1707" height="857" alt="image" src="https://github.com/user-attachments/assets/3190d317-e660-4e52-9253-2356ed502ca8" />
+
 
 ### HTML Report
-![HTML Report](https://via.placeholder.com/800x600.png?text=HTML+Security+Report)
+<img width="1260" height="714" alt="image" src="https://github.com/user-attachments/assets/f8bb0c58-3745-44d9-8da5-72770376b368" />
+
 
 ## 🏗️ Project Structure
 ```
